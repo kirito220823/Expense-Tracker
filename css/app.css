@@ -1,0 +1,194 @@
+/* --- Color Variables for App --- */
+:root {
+  --plus-color: #28a745;
+  --minus-color: #e53935; /* Using the accent red for expenses */
+  --main-color: #e53935; /* Red accent for primary actions */
+  --border-color: #2c2c2c; /* Dark border */
+}
+
+/* --- Main App Card --- */
+.container1 {
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: #1e1e1e; /* Lighter dark background for card */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid var(--border-color);
+}
+
+/* --- Balance Display --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+.header img {
+  width: 3.5rem;
+  opacity: 0.6;
+  filter: invert(1); /* Makes the calculator icon white */
+}
+.balance-container h2:first-of-type {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #b0b0b0; /* Secondary text color */
+  text-transform: uppercase;
+  margin: 0;
+}
+.balance {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff; /* White balance text */
+}
+
+/* --- Income/Expense Boxes --- */
+.inc-exp-container {
+  display: flex;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+.inc-exp-container > div {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  background-color: #121212; /* Darker background for contrast */
+}
+.inc-exp-container > div h4 {
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #b0b0b0;
+}
+.inc-exp-container > div:first-of-type { border-right: 1px solid var(--border-color); }
+.money { font-size: 1.5rem; margin: 0; font-weight: 600; }
+.money.plus { color: var(--plus-color); }
+.money.minus { color: var(--minus-color); }
+
+/* --- Section Headings --- */
+h3 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin: 20px 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* --- History List (Dark Theme with Scrolling) --- */
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 20px 0;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+.list::-webkit-scrollbar { width: 6px; }
+.list::-webkit-scrollbar-track { background: #1e1e1e; border-radius: 10px;}
+.list::-webkit-scrollbar-thumb { background: #444; border-radius: 10px;}
+.list::-webkit-scrollbar-thumb:hover { background: #666; }
+.list li {
+  background-color: #2c2c2c; /* Darker item background */
+  color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px 12px;
+  margin: 0 5px 8px 0;
+  border-radius: 5px;
+  border: 1px solid #333; /* Darker border */
+  text-transform: capitalize;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+.list li:hover { background-color: #333; }
+.list li span { font-weight: 600; }
+.list li.plus { border-left: 4px solid var(--plus-color); }
+.list li.minus { border-left: 4px solid var(--minus-color); }
+.delete-btn {
+  background: transparent; border: 0; color: #888; font-size: 20px;
+  line-height: 1; padding: 0 5px; opacity: 0.7; transition: all 0.2s ease;
+  margin-left: 10px; cursor: pointer;
+}
+.delete-btn:hover { opacity: 1; color: var(--minus-color); transform: scale(1.2); }
+
+/* --- Dark Theme Form Layout --- */
+#form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  align-items: flex-end;
+}
+#form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #b0b0b0;
+}
+#form input[type="text"],
+#form input[type="number"] {
+  border: 1px solid #333;
+  border-radius: 5px;
+  display: block;
+  font-size: 1rem;
+  padding: 8px 12px;
+  width: 100%;
+  background-color: #121212; /* Dark input background */
+  color: #e0e0e0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+#form input:focus {
+  outline: none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.2);
+}
+#form .form-control { height: auto !important; margin-bottom: 0; background: transparent; border: none; padding: 0;}
+
+/* --- Buttons --- */
+.btn-container {
+  display: flex; gap: 10px; margin-top: 15px; grid-column: 1 / -1;
+}
+.btn-container .btn {
+  flex: 1; cursor: pointer; border: 0; color: #fff; font-size: 0.9rem;
+  padding: 12px; border-radius: 5px; text-transform: uppercase; font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-container .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.btn-income { background-color: var(--plus-color); }
+.btn-expense { background-color: var(--minus-color); }
+.btn-income:hover { background-color: #2e7d32; }
+.btn-expense:hover { background-color: #c62828; }
+.btn:focus { outline: 0; }
+
+/* --- Notification --- */
+.notification-container {
+  background-color: #fbe9e7; /* Light red for notification */
+  color: #c62828; /* Dark red text for contrast */
+  padding: 15px 25px;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 20px; left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.notification-container.show {
+  opacity: 1;
+  transform: translate(-50%, -10px);
+}
+.notification-container p { margin: 0; font-weight: 500; }
+

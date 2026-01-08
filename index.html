@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Expense Tracker</title>
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/app.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="">
+            <span>
+              TRACKER
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="quote_btn-container  d-flex justify-content-center">
+              <a href="tel:+917900591951">
+                <img src="images/call.png" alt="">
+                CALL : +91 7900591951
+              </a>
+              <a href="mailto:shikhardiktiya@gmail.com">
+                shikhardiktiya@gmail.com
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class=" slider_section position-relative">
+      <div class="slider_bg-container">
+      </div>
+      <div class="slider-container">
+        <div class="detail-box">
+          <h1>
+            Discovering <br>
+            Expense Tracker
+          </h1>
+          <p>
+            An expense tracker built using HTML, CSS & Javascript to track your Expenses dynamically.
+          </p>
+          <div>
+            <a href="#app-section" class="slider-link">
+              Get Started
+            </a>
+          </div>
+        </div>
+        <div class="img-box">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/project/exp1.jpg" alt="" style="height:70vh;">
+              </div>
+              <div class="carousel-item">
+                <img src="images/project/exp2.jpg" alt="" style="height:70vh;">
+              </div>
+              <div class="carousel-item">
+                <img src="images/project/exp3.jpg" alt="" style="height:70vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="app-section" class="service_section layout_padding">
+    <div class="container">
+      <div class="d-flex flex-column align-items-end">
+        <div class="custom_heading-container">
+          <hr>
+          <h2>
+            Expense Tracker
+          </h2>
+        </div>
+        <p>
+          An expense tracker built using HTML, CSS & Javascript to track your Expenses dynamically.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="service_container layout_padding2">
+        <div class="container container1">
+          <div class="header">
+            <img src="https://i.ibb.co/jfScDTC/budget.png" alt="Expense Tracker" />
+            <div class="balance-container">
+              <h2>Your Balance</h2>
+              <h2 id="balance" class="balance">₹0.00</h2>
+            </div>
+          </div>
+          <div class="inc-exp-container">
+            <div>
+              <h4>Income</h4>
+              <p id="money-plus" class="money plus">+₹0.00</p>
+            </div>
+            <div>
+              <h4>Expenses</h4>
+              <p id="money-minus" class="money minus">-₹0.00</p>
+            </div>
+          </div>
+          
+          <h3>Add new transaction</h3>
+          <form id="form" class="my-2">
+            <div class="form-control" id="description-control">
+              <label for="text">Description</label>
+              <input type="text" id="text" placeholder="e.g. Salary, Rent..." />
+            </div>
+            <div class="form-control" id="amount-control">
+              <label for="amount">Amount</label>
+              <input type="number" id="amount" placeholder="Enter amount..." />
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-income" id="btn-income">Add Income</button>
+              <button class="btn btn-expense" id="btn-expense">Add Expense</button>
+            </div>
+          </form>
+
+          <h3>History</h3>
+          <ul id="list" class="list"></ul>
+        </div>
+        <div class="notification-container" id="notification">
+          <p>Please add a description and amount</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h6>
+              About
+            </h6>
+            <div class="custom_heading-container">
+              <h2>
+                Expense Tracker
+              </h2>
+              <hr>
+            </div>
+            <p>
+              Expense Tracker, a powerful expense tracking web application. This comprehensive tool is designed to
+              assist users in effectively managing their financial transactions, including earnings, expenses,
+              investments, and savings.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="info_social">
+        <div>
+          <a href="#">
+            <img src="images/fb.png" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="images/twitter.png" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/shikhar-diktiya/">
+            <img src="images/linkedin.png" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="images/insta.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div>
+        <p>
+          Hi there, My name’s Shikhar Diktiya, I’m 23 and I just wanted to say welcome to our expense tracking system.
+          Let's stay organized and empowered on our financial journey together!"
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2025 All Rights Reserved By
+      <a href="#">Shikhar</a>
+    </p>
+  </section>
+
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
+

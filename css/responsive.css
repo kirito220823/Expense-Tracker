@@ -1,0 +1,91 @@
+/* Styles for tablets and smaller devices */
+@media (max-width: 992px) {
+  /* Hides contact info in header on smaller screens */
+  .quote_btn-container a {
+    display: none;
+  }
+
+  /* Stacks the hero section vertically on mobile */
+  .slider_section .slider-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  /* UPDATED: Changed the background to match the dark theme */
+  .slider_section .detail-box {
+    width: 100%;
+    text-align: center;
+    padding: 75px 15px;
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+    position: relative;
+  }
+
+  .slider_section .img-box {
+    width: 100%;
+    margin: 0;
+  }
+
+  .slider_section .slider_bg-container {
+    display: none;
+  }
+
+  .slider_section .detail-box p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact_items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact_items .item {
+    margin: 20px;
+  }
+}
+
+/* Styles for smaller tablets and mobile phones */
+@media (max-width: 768px) {
+  /* Makes the app form stack vertically on smaller screens */
+  #form {
+    grid-template-columns: 1fr; /* Stacks to a single column */
+  }
+
+  .contact_section .contact_form-container button {
+    margin-bottom: 45px;
+  }
+
+  .contact_section .contact_form-container input {
+    width: 100%;
+  }
+}
+
+/* Styles for smaller mobile phones */
+@media (max-width: 576px) {
+  .custom_heading-container hr {
+    display: none;
+  }
+  
+  .slider_section .detail-box h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Styles for very small mobile phones */
+@media (max-width: 480px) {
+  .slider_section .detail-box h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Styles for large desktops */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+
+  .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 10px 30px;
+  }
+}
